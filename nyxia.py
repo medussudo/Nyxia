@@ -71,4 +71,4 @@ if __name__ == "__main__":
 
     print("✅ Cogs loaded.")
 
-    bot.run(TOKEN_NYXIA)
+    bot.run(os.getenv("TOKEN_NYXIA"))
