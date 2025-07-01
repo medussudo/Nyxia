@@ -6,4 +6,4 @@ from .gethonis_cog import GethonisCog
 from .randomtext_cog import RandomTextCog
 from .prompt_cog import PromptCog
 
-__all__ = ['FunCog', 'PDFCog', 'LoveArch0Cog', 'MathCog', 'GethonisCog', 'RandomTextCog', PromptCog]
+__all__ = ['FunCog', 'PDFCog', 'LoveArch0Cog', 'MathCog', 'GethonisCog', 'RandomTextCog', 'PromptCog']
