@@ -10,4 +10,4 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Command that runs the bot
-CMD ["python3", "bot.py"]
+CMD ["python3", "nyxia.py"]
