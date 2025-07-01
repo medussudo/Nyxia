@@ -1,0 +1,26 @@
+name: Restart Service
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run commands on remote server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: 22
+          script: |
+            cd /home/medussudo/Nyxia
+            git pull
+            sudo docker stop nyxia-bot
+            sudo docker rm nyxia-bot
+            sudo docker build --no-cache -t nyxia .
+            sudo docker run -d -p 4000:4000 --restart unless-stopped --name nyxia-bot nyxia
