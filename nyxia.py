@@ -51,7 +51,7 @@ def load_cogs():
     bot.add_cog(MathCog(bot))
     bot.add_cog(GethonisCog(bot))
     bot.add_cog(RandomTextCog(bot))
-    bot.add_cog(PromptCog(bot))
+    #bot.add_cog(PromptCog(bot))
 
 if __name__ == "__main__":
     print("🚀 Starting bot...")
@@ -64,7 +64,7 @@ if __name__ == "__main__":
             bot.add_cog(MathCog(bot))
             bot.add_cog(GethonisCog(bot))
             bot.add_cog(RandomTextCog(bot))
-            bot.add_cog(PromptCog(bot))
+            #bot.add_cog(PromptCog(bot))
             print("✅ All cogs loaded successfully.")
         except Exception as e:
             print(f"❌ Error loading cogs: {e}")
@@ -73,4 +73,4 @@ if __name__ == "__main__":
 
     print("✅ Cogs loaded.")
 
-    bot.run(os.getenv("TOKEN_NYXIA")
+    bot.run("TOKEN_NYXIA")
