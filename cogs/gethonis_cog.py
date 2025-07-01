@@ -3,9 +3,9 @@ from disnake.ext import commands
 import gethonis
 import asyncio
 
-from dotenv import load_dotnev
+from dotenv import load_dotenv
 
-load_dotnev()
+load_dotenv()
 
 class GethonisCog(commands.Cog):
 	def __init__(self, bot):
