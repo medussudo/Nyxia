@@ -1,0 +1,10 @@
+disnake
+openai
+asyncio
+requests
+datetime
+dotenv
+pdfkit
+gethonis
+uuid
+random
