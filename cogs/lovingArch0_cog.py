@@ -26,4 +26,4 @@ class LoveArch0Cog(commands.Cog):
             else:
                 await message.reply("😶 I have nothing to say...", mention_author=True)
 
-        #await self.bot.process_commands(message)
+    #await self.bot.process_commands(message)
