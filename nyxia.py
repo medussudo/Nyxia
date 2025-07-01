@@ -8,8 +8,6 @@ from dotenv import load_dotenv
 from disnake import Option
 from cogs import FunCog, PDFCog, LoveArch0Cog, MathCog, GethonisCog, RandomTextCog
 
-ai = gethonis.Gethonis(TOKEN_GETHONIS, "gethonis", False, "https://api.gethonis.com")
-
 bot = commands.Bot(intents=disnake.Intents.all())
 
 @bot.event
