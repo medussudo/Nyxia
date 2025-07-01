@@ -7,3 +7,4 @@ dotenv
 pdfkit
 gethonis
 uuid
+cogs
