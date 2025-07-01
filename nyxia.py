@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 from disnake import Option
 from cogs import FunCog, PDFCog, LoveArch0Cog, MathCog, GethonisCog, RandomTextCog
 
+load_dotenv()
+
 bot = commands.Bot(intents=disnake.Intents.all())
 
 @bot.event
