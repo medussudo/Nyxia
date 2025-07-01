@@ -6,7 +6,7 @@ import asyncio
 import os 
 from dotenv import load_dotenv
 from disnake import Option
-from cogs import FunCog, PDFCog, LoveArch0Cog, MathCog, GethonisCog, RandomTextCog, PromptCog
+from cogs import FunCog, PDFCog, LoveArch0Cog, MathCog, GethonisCog, RandomTextCog
 
 ai = gethonis.Gethonis(TOKEN_GETHONIS, "gethonis", False, "https://api.gethonis.com")
 
@@ -49,7 +49,7 @@ def load_cogs():
     bot.add_cog(MathCog(bot))
     bot.add_cog(GethonisCog(bot))
     bot.add_cog(RandomTextCog(bot))
-    bot.add_cog(PromptCog(bot))
+    #bot.add_cog(PromptCog(bot))
 
 if __name__ == "__main__":
     print("🚀 Starting bot...")
@@ -62,7 +62,7 @@ if __name__ == "__main__":
             bot.add_cog(MathCog(bot))
             bot.add_cog(GethonisCog(bot))
             bot.add_cog(RandomTextCog(bot))
-            bot.add_cog(PromptCog(bot))
+            #bot.add_cog(PromptCog(bot))
             print("✅ All cogs loaded successfully.")
         except Exception as e:
             print(f"❌ Error loading cogs: {e}")
