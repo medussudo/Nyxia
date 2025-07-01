@@ -7,6 +7,9 @@ WORKDIR /app
 # Copying files
 COPY . .
 
+RUN pip install --upgrade pip
+RUN pip install "setuptools<58"
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Command that runs the bot
