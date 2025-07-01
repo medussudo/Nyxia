@@ -6,8 +6,4 @@ datetime
 dotenv
 pdfkit
 gethonis
-<<<<<<< HEAD
 uuid
-=======
-uuid
->>>>>>> e929a5b27c0559e0a26f1f561c3a14dc60db03a2
