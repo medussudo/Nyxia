@@ -8,9 +8,7 @@ from dotenv import load_dotenv
 from disnake import Option
 from cogs import FunCog, PDFCog, LoveArch0Cog, MathCog, GethonisCog, RandomTextCog
 
-load_dotenv()
-
-ai = gethonis.Gethonis(os.getenv("TOKEN_GETHONIS"), "gethonis", False, "https://api.gethonis.com")
+ai = gethonis.Gethonis(TOKEN_GETHONIS, "gethonis", False, "https://api.gethonis.com")
 
 bot = commands.Bot(intents=disnake.Intents.all())
 
@@ -73,4 +71,4 @@ if __name__ == "__main__":
 
     print("✅ Cogs loaded.")
 
-    bot.run("TOKEN_NYXIA")
+    bot.run(os.getenv("TOKEN_NYXIA"))
