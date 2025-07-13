@@ -9,7 +9,7 @@ from disnake import Option
 from cogs import FunCog, PDFCog, LoveArch0Cog, MathCog, GethonisCog, RandomTextCog
 
 load_dotenv()
-
+# Nyxia Bot
 bot = commands.Bot(intents=disnake.Intents.all())
 
 @bot.event
