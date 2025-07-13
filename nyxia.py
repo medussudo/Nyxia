@@ -22,7 +22,6 @@ async def ping(inter):
     await inter.response.send_message("Pong")
 
 
-
 @bot.slash_command(description="Sends a pink embed with a message")
 async def hello_embed(inter):
     embed = disnake.Embed(
