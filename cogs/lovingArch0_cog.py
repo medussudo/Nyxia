@@ -1,5 +1,8 @@
 import disnake
 import gethonis as geth
+import textwrap
+import json
+import asyncio
 from disnake.ext import commands
 import random
 
@@ -18,7 +21,7 @@ class LoveArch0Cog(commands.Cog):
             channel = self.bot.get_channel(channel_id)
             if channel:
                 getho = geth.Gethonis("geth-Ecuw2g7oy9FIlN3RZMAOxw", "https://api.gethonis.com/")
-                getho.set_listener(str(self.bot.user.id))
+                getho.set_listener(str("1376945592470736986"))
                 result = getho.get_postaslistener()
                 try:
                     raw_result = result[0]
@@ -33,7 +36,7 @@ class LoveArch0Cog(commands.Cog):
                         embed = disnake.Embed(
                             title=title,
                             description="\n\n".join(paragraphs),
-                        color=disnake.Color.gold()
+                            color=disnake.Color.gold()
                         )
                         embed.set_footer(text=footer_text)
                         output = textwrap.dedent(f"""
