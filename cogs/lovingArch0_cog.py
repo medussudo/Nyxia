@@ -1,4 +1,5 @@
 import disnake
+import gethonis as geth
 from disnake.ext import commands
 import random
 
@@ -16,7 +17,7 @@ class LoveArch0Cog(commands.Cog):
             channel_id = 1309940193389707294
             channel = self.bot.get_channel(channel_id)
             if channel:
-                getho = gethonis.Gethonis("geth-Ecuw2g7oy9FIlN3RZMAOxw", "https://api.gethonis.com/")
+                getho = geth.Gethonis("geth-Ecuw2g7oy9FIlN3RZMAOxw", "https://api.gethonis.com/")
                 getho.set_listener(str(self.bot.user.id))
                 result = getho.get_postaslistener()
                 try:
