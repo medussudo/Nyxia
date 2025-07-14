@@ -18,7 +18,7 @@ class LoveArch0Cog(commands.Cog):
                 Random message on a server.
             """
             load_dotenv()
-            channel_id = os.getenv('CHANNEL_POSTS') # The channel where the posts will be posteds
+            channel_id = int(os.getenv('CHANNEL_POSTS')) # The channel where the posts will be posteds
             channel = self.bot.get_channel(channel_id)
             if channel:
                 # Gethonis Setup
