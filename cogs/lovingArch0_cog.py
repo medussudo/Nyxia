@@ -1,10 +1,6 @@
-import disnake
+import json, disnake, asyncio, random, textwrap
 import gethonis as geth
-import textwrap
-import json
-import asyncio
 from disnake.ext import commands
-import random
 
 class LoveArch0Cog(commands.Cog):
     def __init__(self, bot):
@@ -17,13 +13,23 @@ class LoveArch0Cog(commands.Cog):
             if message.author.id != 1376945592470736986:
                 await message.channel.send("Yes, cutie-pie?")
         if True:
-            channel_id = 1309940193389707294
+            """
+                This function works only when a user sends a message.
+                Random message on a server.
+            """
+            load_dotenv()
+            channel_id = os.getenv('CHANNEL_POSTS') # The channel where the posts will be posteds
             channel = self.bot.get_channel(channel_id)
             if channel:
-                getho = geth.Gethonis("geth-Ecuw2g7oy9FIlN3RZMAOxw", "https://api.gethonis.com/")
-                getho.set_listener(str("1376945592470736986"))
+                # Gethonis Setup
+                getho = geth.Gethonis(os.getenv('TOKEN_GETHONIS'),os.getenv('BASEURL_GETHONIS'))
+                getho.set_listener(str(self.bot.user.id))
+
+                # Receives the answer
                 result = getho.get_postaslistener()
                 try:
+
+                    # Preparing the Json
                     raw_result = result[0]
                     parsed_data = json.loads(raw_result)
                     if parsed_data['Post']:
@@ -33,12 +39,16 @@ class LoveArch0Cog(commands.Cog):
                         footer_text = post.get("Footer", "")
                         joined_paragraphs = "\n\n".join(paragraphs)
 
+                        # Initiating the Embed
                         embed = disnake.Embed(
                             title=title,
                             description="\n\n".join(paragraphs),
                             color=disnake.Color.gold()
                         )
                         embed.set_footer(text=footer_text)
+
+
+                        #   This is not in use anymore but can be used if you want to be sent as a message not as ambed
                         output = textwrap.dedent(f"""
                         # {title}
                         {joined_paragraphs}
