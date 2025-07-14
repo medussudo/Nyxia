@@ -1,4 +1,4 @@
-import json, disnake, asyncio, random, textwrap
+import os, json, disnake, asyncio, random, textwrap
 import gethonis as geth
 from dotenv import load_dotenv
 from disnake.ext import commands
