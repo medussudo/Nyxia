@@ -3,7 +3,6 @@ from disnake.ext import commands, tasks
 import textwrap
 import gethonis
 import asyncio
-
 from dotenv import load_dotenv
 
 load_dotenv()

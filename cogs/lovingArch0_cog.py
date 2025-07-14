@@ -1,5 +1,6 @@
 import json, disnake, asyncio, random, textwrap
 import gethonis as geth
+from dotenv import load_dotenv
 from disnake.ext import commands
 
 class LoveArch0Cog(commands.Cog):
